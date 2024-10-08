@@ -1,0 +1,56 @@
+<%- include('layout/header')  %>
+<div class="container">
+    <div class="row">
+        <div class="homepage">
+            <h1>add staff page</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto mt-4">
+                        <div class="card shadow border-info-subtle border-5">
+                            <div class="card-header bg-primary">
+                                <h5 class="text-light fw-bold">Thêm nhân viên mới</h5>
+                            </div> 
+                            <div class="card-body p-4 bg-">
+                                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="name" class="fw-bold">Họ và tên:</label>
+                                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Nhập họ và tên" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="fw-bold">Email:</label>
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Nhập địa chỉ Email" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="fw-bold">Số điện thoại:</label>
+                                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Nhập số điện thoại" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label fw-bold">Cung cấp ảnh nhân viên:</label>
+                                        <input type="file" name="image" class="form-control form-control-lg" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label fw-bold">Địa chỉ:</label>
+                                        <input type="text" " name="address" class="form-control form-control-lg" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="birthday" class="form-label fw-bold">Ngày sinh:</label>
+                                        <input type="date"   name="birthday" class="form-control form-control-lg" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="workday" class="form-label fw-bold">Ngày làm việc:</label>
+                                        <input type="date"   name="workday" class="form-control form-control-lg" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="submit" name="submit" value="Thêm" class="btn btn-primary btn-lg" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('layout/footer')  %>
+

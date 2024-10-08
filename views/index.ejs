@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    moment.locale('en'); // Điều chỉnh ngôn ngữ theo yêu cầu (ví dụ: 'en' cho tiếng Anh)
+    
+    window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('nav-nav');
+  var distanceFromTop = navbar.offsetTop;
+
+  if (window.pageYOffset > distanceFromTop) {
+    navbar.style.position = 'fixed';
+    navbar.style.top = '0';
+  } else {
+    navbar.style.position = 'relative';
+  }
+});
+</script>
+<style>
+    #nav-nav{
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+</style>
+</head>
+<body class="body1">
+    
+    <nav id ="nav-nav"  class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class = "container border-info-subtle border-5">
+            <a href="/" class="navbar-brand">Hệ thống đánh giá</a>
+            <button class="navbar-toggler" data-bs-target="#my-nav"
+            data-bs-toggle="collapse" aria-controls="my-nav" aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <u1 class = "navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/"><i class = "fas fa-home me-i"></i>Trang chủ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/add"><i class="fas fa-user-plus me-1"></i>Thêm nhân viên</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/add_list"><i class="fas fa-user me-1"></i>Danh sách nhân viên</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-globe me-1"></i>Giới thiệu</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/login"><i class="fa fa-sign-in me-1"></i>Đăng nhập</a>
+                    </li>
+                    
+                </u1>
+            </div>
+        </div>
+    </nav>
+
+
+</div> 
+<div class="content">
+    <h1>3TB <br><span>Hệ thống đánh giá</span> <br>Chất lượng phục vụ</h1>
+    <p class="par">Là một công cụ quan trọng trong việc đảm bảo sự hài lòng và sự phục vụ chuyên nghiệp của bộ phận tiếp dân.
+         Hệ thống này được thiết kế để đo lường và đánh giá mức độ hiệu quả của nhân viên trong việc tương tác và phục vụ khách hàng hoặc công chúng. 
+        <br> </p>
+
+        <br><button class="cn"><a href="/staff_list">ĐÁNH GIÁ NGAY</a></button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.3/datatables.min.js"></script>
+<script>
+
+    
+    $(document).ready(function (){
+        $("table").DataTable({
+            order: [0, 'desc'],
+           /* "language": {
+        "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Vietnamese.json",
+        
+      
+    }*/
+        })
+        $('#searchInput').on('keyup', function() {
+        table.search(this.value).draw();
+    });
+    
+    }) 
+
+</script>
+</body>
+</html>

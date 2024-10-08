@@ -1,0 +1,58 @@
+<%- include('layout/header')  %>
+<div class="container">
+    <div class="row">
+        <div class="homepage">
+            <h1>Edit staff page</h1>    
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto mt-4">
+                        <div class="card shadow">
+                            <div class="card-header bg-success">
+                                <h5 class="text-light">Chỉnh sửa thông tin  (<%= staff.name  %>)</h5>
+                            </div>
+                            <div class="card-body p-4">
+                                <form action="/update/ <%= staff._id %>" method="post" id="add-form" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="name">Họ và tên:</label>
+                                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Name" value="<%= staff.name  %>" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email">Địa chỉ Email:</label>
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter Email" value="<%= staff.email  %>" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone">Số điện thoại:</label>
+                                        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter Phone" value="<%= staff.phone%>" required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Chọn ảnh mới:</label>
+                                        <input type="file" name="image" class="form-control form-control-lg" required/>
+                                        <img src="/<%= staff.image %>" width="100" class="img-thumbnail mt-1">
+                                    </div>
+                                    <input type="hidden" name="old_image" value="<%= staff.image  %>">
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Địa chỉ:</label>
+                                        <input type="text" " name="address" class="form-control form-control-lg" value="<%= staff.address  %>"required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Ngày sinh</label>
+                                        <input type="date"   name="birthday" class="form-control form-control-lg" value="<%= staff.birthday %>"required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Ngày làm việc</label>
+                                        <input type="date"   name="workday" class="form-control form-control-lg" value="<%= staff.birthday %>"required/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="submit" name="submit" value="update Staff" class="btn btn-success btn-lg" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('layout/footer')  %>
+
