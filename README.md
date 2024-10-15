@@ -48,31 +48,25 @@
    http://localhost:3000
    ```
 
-## Hướng dẫn sử dụng
+# Hướng dẫn sử dụng
 
-1. **Đăng ký và đăng nhập:** Người dùng mới có thể đăng ký tài khoản mới hoặc đăng nhập vào hệ thống với thông tin đăng nhập đã có.
-2. **Thêm nhân viên:** Admin có thể thêm nhân viên mới trong phần quản lý nhân viên.
-3. **Đánh giá nhân viên:** Người quản lý chọn nhân viên và tiến hành đánh giá dựa trên các tiêu chí được định nghĩa.
-4. **Xem và phản hồi:** Nhân viên xem đánh giá của mình và có thể phản hồi lại với quản lý.
-5. **Xem báo cáo:** Quản lý và admin có thể xem báo cáo tổng quan về hiệu suất của từng nhân viên hoặc tổng hợp theo các tiêu chí.
+1. Đăng ký và đăng nhập: Người dùng mới có thể đăng ký tài khoản mới hoặc đăng nhập vào hệ thống với thông tin đăng nhập đã có.
+2. Thêm nhân viên: Admin có thể thêm nhân viên mới trong phần quản lý nhân viên.
+3. Đánh giá nhân viên: Người quản lý chọn nhân viên và tiến hành đánh giá dựa trên các tiêu chí được định nghĩa.
+4. Xem và phản hồi: Nhân viên xem đánh giá của mình và có thể phản hồi lại với quản lý.
+5. Xem báo cáo: Quản lý và admin có thể xem báo cáo tổng quan về hiệu suất của từng nhân viên hoặc tổng hợp theo các tiêu chí.
 
 ## Thư viện sử dụng
 
-- **Back-end:**
+- Back-end:
   - [Express.js](https://expressjs.com/): Web framework cho Node.js.
   - [Mongoose](https://mongoosejs.com/): ODM cho MongoDB để kết nối và quản lý dữ liệu.
   
-- **Front-end:**
+- Front-end:
   - **HTML/CSS**: Để xây dựng giao diện người dùng.
   - [jQuery](https://jquery.com/): Thư viện JavaScript để xử lý sự kiện và thao tác DOM.
 
-## Đóng góp
 
-Nếu bạn muốn đóng góp vào dự án, vui lòng fork repository, tạo nhánh mới và gửi pull request.
-
-## License
-
-Dự án được cấp phép theo [MIT License](LICENSE).
 
 ---
 
