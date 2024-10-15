@@ -1,58 +1,70 @@
 
-
 # Staffs Evaluate Web
 
-## Giới thiệu
+# Giới thiệu
 
-Staffs Evaluate Web là một hệ thống quản lý và đánh giá nhân viên trực tuyến, cung cấp nền tảng cho các doanh nghiệp đánh giá hiệu suất làm việc của nhân viên dựa trên các tiêu chí định trước. Hệ thống giúp tối ưu hóa quá trình đánh giá, cung cấp báo cáo chi tiết và quản lý các phản hồi để cải thiện hiệu suất công việc.
+**Staffs Evaluate Web** là hệ thống đánh giá hiệu suất làm việc của nhân viên dựa trên các tiêu chí định trước. Hệ thống giúp quản lý thông tin nhân viên, thực hiện đánh giá, và quản lý phản hồi một cách hiệu quả. Dự án sử dụng Node.js làm back-end, MongoDB làm cơ sở dữ liệu, và front-end được phát triển bằng HTML, CSS kết hợp với jQuery.
 
-## Chức năng chính
+# Chức năng chính
 
-- **Đăng ký/Đăng nhập:** Người dùng có thể tạo tài khoản và đăng nhập vào hệ thống với quyền truy cập tương ứng.
-- **Quản lý nhân viên:** Admin có thể thêm, chỉnh sửa, và xóa thông tin nhân viên trong hệ thống.
-- **Đánh giá nhân viên:** Người quản lý có thể đánh giá nhân viên dựa trên các tiêu chí như hiệu suất, thái độ, kỹ năng chuyên môn, và mức độ hoàn thành công việc.
-- **Phản hồi:** Nhân viên có thể xem các đánh giá của mình và phản hồi lại với người quản lý.
-- **Báo cáo:** Hệ thống cung cấp báo cáo tổng quan về hiệu suất nhân viên theo thời gian và các tiêu chí cụ thể.
+- Đăng ký/Đăng nhập: Cho phép người dùng đăng ký tài khoản mới hoặc đăng nhập vào hệ thống với quyền hạn tương ứng.
+- Quản lý nhân viên: Admin có thể thêm, chỉnh sửa, xóa nhân viên và xem thông tin chi tiết của từng nhân viên.
+- Đánh giá nhân viên: Người quản lý có thể đánh giá hiệu suất làm việc của nhân viên theo các tiêu chí như hiệu suất công việc, kỹ năng, thái độ và tinh thần làm việc.
+- Xem và phản hồi: Nhân viên có thể xem đánh giá của mình và gửi phản hồi tới người quản lý.
+- Báo cáo: Hệ thống cung cấp báo cáo tổng hợp và thống kê các kết quả đánh giá của từng nhân viên và theo các tiêu chí đánh giá cụ thể.
 
-Công nghệ sử dụng
+# Công nghệ sử dụng trong hệ thống:
 
-- **Ngôn ngữ lập trình:** ASP.NET Core, C#
-- **Cơ sở dữ liệu:** SQL Server
-- **Frontend:** HTML, CSS, JavaScript
-- **Trình duyệt:** Google Chrome, Firefox, Edge
-- **Công cụ khác:** .NET SDK, Entity Framework
+- Bạck-end: Node.js (Express.js)
+- Cơ sở dữ liệu: MongoDB (Mongoose)
+- Frontend: HTML, CSS, JavaScript, jQuery
+- Trình duyệt: Google Chrome, Firefox, Edge
 
-## Cài đặt
+# Cài đặt
 
 1. Clone dự án về máy:
    ```bash
    git clone https://github.com/username/staffs-evaluate-web.git
    ```
-2. Cài đặt các dependency:
+
+2. Di chuyển vào thư mục dự án và cài đặt các dependencies:
    ```bash
-   dotnet restore
+   cd staffs-evaluate-web
+   npm install
    ```
-3. Cấu hình kết nối cơ sở dữ liệu trong file `appsettings.json`:
-   ```json
-   "ConnectionStrings": {
-      "DefaultConnection": "Server=.;Database=StaffsEvaluate;Trusted_Connection=True;"
-   }
+
+3. Cấu hình kết nối cơ sở dữ liệu MongoDB trong file `.env`:
    ```
-4. Chạy migrations để tạo bảng trong cơ sở dữ liệu:
+   MONGO_URI=mongodb://localhost:27017/staffs-evaluate
+   ```
+
+4. Chạy dự án:
    ```bash
-   dotnet ef database update
+   npm start
    ```
-5. Chạy dự án:
-   ```bash
-   dotnet run
+
+5. Truy cập hệ thống tại địa chỉ:
+   ```
+   http://localhost:3000
    ```
 
 ## Hướng dẫn sử dụng
 
-1. **Đăng ký và đăng nhập:** Người dùng mới cần đăng ký tài khoản và sau đó đăng nhập vào hệ thống.
-2. **Thêm nhân viên:** Admin vào phần "Quản lý nhân viên" để thêm thông tin nhân viên.
-3. **Đánh giá nhân viên:** Người quản lý chọn nhân viên và tiến hành đánh giá theo các tiêu chí có sẵn.
-4. **Xem báo cáo:** Admin và quản lý có thể xem báo cáo tổng hợp hiệu suất của từng nhân viên.
+1. **Đăng ký và đăng nhập:** Người dùng mới có thể đăng ký tài khoản mới hoặc đăng nhập vào hệ thống với thông tin đăng nhập đã có.
+2. **Thêm nhân viên:** Admin có thể thêm nhân viên mới trong phần quản lý nhân viên.
+3. **Đánh giá nhân viên:** Người quản lý chọn nhân viên và tiến hành đánh giá dựa trên các tiêu chí được định nghĩa.
+4. **Xem và phản hồi:** Nhân viên xem đánh giá của mình và có thể phản hồi lại với quản lý.
+5. **Xem báo cáo:** Quản lý và admin có thể xem báo cáo tổng quan về hiệu suất của từng nhân viên hoặc tổng hợp theo các tiêu chí.
+
+## Thư viện sử dụng
+
+- **Back-end:**
+  - [Express.js](https://expressjs.com/): Web framework cho Node.js.
+  - [Mongoose](https://mongoosejs.com/): ODM cho MongoDB để kết nối và quản lý dữ liệu.
+  
+- **Front-end:**
+  - **HTML/CSS**: Để xây dựng giao diện người dùng.
+  - [jQuery](https://jquery.com/): Thư viện JavaScript để xử lý sự kiện và thao tác DOM.
 
 ## Đóng góp
 
@@ -64,4 +76,4 @@ Dự án được cấp phép theo [MIT License](LICENSE).
 
 ---
 
-Hy vọng phần README này sẽ giúp ích cho dự án của bạn!
+Phần README này đã được điều chỉnh theo cấu trúc của dự án với các công nghệ như Node.js, Express, MongoDB, và front-end HTML, CSS, jQuery.
